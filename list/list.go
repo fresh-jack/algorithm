@@ -70,3 +70,30 @@ func removeDuplicateNodes2(head *Node) *Node {
 	}
 	return head
 }
+
+/*
+	merge two order list
+*/
+func mergeOrderList(l1, l2 *Node) *Node {
+	head := &Node{}
+	cur := head
+	for l1 != nil && l2 != nil {
+		if l1.Val > l2.Val {
+			cur.Next = l2
+			l2 = l2.Next
+		} else {
+			cur.Next = l1
+			l1 = l1.Next
+		}
+	}
+
+	if l1 != nil {
+		cur.Next = l1
+	}
+
+	if l2 != nil {
+		cur.Next = l2
+	}
+
+	return head.Next
+}
