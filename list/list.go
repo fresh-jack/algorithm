@@ -55,6 +55,9 @@ func removeDuplicateNodes(head *Node) *Node {
 	return head
 }
 
+/*
+	removeDuplicateNodes2 ... O(n)
+*/
 func removeDuplicateNodes2(head *Node) *Node {
 	if head != nil {
 		cur := head
@@ -97,3 +100,7 @@ func mergeOrderList(l1, l2 *Node) *Node {
 
 	return head.Next
 }
+
+/*
+
+ */
